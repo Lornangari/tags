@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Filters{% endblock title %}
+
+{% block content %}
+    <h2>{{ my_string|upper }}</h2>
+
+    <h2>Date</h2>
+    <p>Date: {{ my_date|date:"F j, Y" }}</p>
+
+    <h2>Truncate Characters </h2>
+    <p>{{ long_string |truncatechars:10 }}</p>
+
+    <h2>Length Filter</h2>
+    <p> {{ my_len|length }}</p>
+
+    <h2>Default Filter</h2>
+    <p>Empty variable : {{ empty_var|default:"No value provided" }}</p>
+
+    <h2>join</h2>
+    <p> {{ skills|join:"," }}</p>
+
+    <h2>capfirst</h2>
+    <p> {{ string2|capfirst }}</p>
+
+    <h2>slice</h2>
+    <p> {{ string2|slice:":3" }}</p>
+
+    <h2>wordcount</h2>
+    <p> {{ string2|wordcount }}</p>
+
+    <h2>linebreaks</h2>
+    <p> {{ string3|linebreaks }}</p>
+
+
+{% endblock content %}
